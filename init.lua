@@ -122,12 +122,10 @@ minetest.register_node("christmas:ligs", {
 	drawtype = "signlike",
 	tiles = {"christmas_lig.png"},
 	inventory_image = "christmas_lig.png",
-	light_propagates = true,
 	paramtype = "light",
 	paramtype2 = "wallmounted",
-	light_source = 20,
+	light_source = minetest.LIGHT_MAX,
         is_ground_content = true,
-	wall_mounted = true,
 	walkable = false,
 	climbable = false,
 	selection_box = {
@@ -138,8 +136,8 @@ minetest.register_node("christmas:ligs", {
 	},
 	legacy_wallmounted = true,
 	on_construct = function(pos)
-		--local n = minetest.env:get_node(pos)
-		local meta = minetest.env:get_meta(pos)
+		--local n = minetest.get_node(pos)
+		local meta = minetest.get_meta(pos)
 	end,
 	groups = {choppy=2,dig_immediate=2},
 })
@@ -148,12 +146,10 @@ minetest.register_node("christmas:stoc", {
 	drawtype = "signlike",
 	tiles = {"christmas_stoc.png"},
 	inventory_image = "christmas_stoc.png",
-	light_propagates = true,
 	paramtype = "light",
 	paramtype2 = "wallmounted",
 	light_source = 0,
         is_ground_content = true,
-	wall_mounted = true,
 	walkable = false,
 	climbable = false,
 	selection_box = {
@@ -164,8 +160,8 @@ minetest.register_node("christmas:stoc", {
 	},
 	legacy_wallmounted = true,
 	on_construct = function(pos)
-		--local n = minetest.env:get_node(pos)
-		local meta = minetest.env:get_meta(pos)
+		--local n = minetest.get_node(pos)
+		local meta = minetest.get_meta(pos)
 	end,
 	groups = {choppy=2,dig_immediate=2},
 })
@@ -174,12 +170,10 @@ minetest.register_node("christmas:gar", {
 	drawtype = "signlike",
 	tiles = {"christmas_garr.png"},
 	inventory_image = "christmas_garr.png",
-	light_propagates = true,
 	paramtype = "light",
 	paramtype2 = "wallmounted",
 	light_source = 0,
         is_ground_content = true,
-	wall_mounted = true,
 	walkable = false,
 	climbable = false,
 	selection_box = {
@@ -190,8 +184,8 @@ minetest.register_node("christmas:gar", {
 	},
 	legacy_wallmounted = true,
 	on_construct = function(pos)
-		--local n = minetest.env:get_node(pos)
-		local meta = minetest.env:get_meta(pos)
+		--local n = minetest.get_node(pos)
+		local meta = minetest.get_meta(pos)
 	end,
 	groups = {choppy=2,dig_immediate=2},
 })
@@ -202,10 +196,8 @@ minetest.register_node("christmas:slig", {
 	inventory_image = "christmas_slig.png",
 	paramtype = "light",
 	paramtype2 = "wallmounted",
-	light_propagates = true,
 	sunlight_propagates = true,
 	walkable = false,
-	wall_mounted = true,
 	light_source = 10,
 	selection_box = {
 		type = "wallmounted",
@@ -215,8 +207,8 @@ minetest.register_node("christmas:slig", {
 	},
 	legacy_wallmounted = true,
 	on_construct = function(pos)
-		--local n = minetest.env:get_node(pos)
-		local meta = minetest.env:get_meta(pos)
+		--local n = minetest.get_node(pos)
+		local meta = minetest.get_meta(pos)
 	end,
 	groups = {choppy=2,dig_immediate=2},
 	furnace_burntime = 4,
@@ -228,11 +220,9 @@ minetest.register_node("christmas:star", {
 	inventory_image = "christmas_star.png",
 	paramtype = "light",
 	paramtype2 = "wallmounted",
-	light_propagates = true,
 	sunlight_propagates = true,
 	walkable = false,
-	wall_mounted = true,
-	light_source = 40,
+	light_source = minetest.LIGHT_MAX,
 	selection_box = {
 		type = "wallmounted",
 		wall_top = {-0.1, 0.5-0.6, -0.1, 0.1, 0.5, 0.1},
@@ -241,8 +231,8 @@ minetest.register_node("christmas:star", {
 	},
 	legacy_wallmounted = true,
 	on_construct = function(pos)
-		--local n = minetest.env:get_node(pos)
-		local meta = minetest.env:get_meta(pos)
+		--local n = minetest.get_node(pos)
+		local meta = minetest.get_meta(pos)
 	end,
 	groups = {choppy=2,dig_immediate=2},
 	furnace_burntime = 4,
@@ -253,11 +243,10 @@ minetest.register_node("christmas:fire", {
 	tiles = {"christmas_fire.png", "christmas_fire.png", "christmas_fire.png"},
 	inventory_image = "christmas_fire.png",
 	paramtype = "light",
-	light_propagates = true,
 	sunlight_propagates = true,
 	walkable = false,
-	wall_mounted = true,
-	light_source = 30,
+	paramtype2 = "wallmounted",
+	light_source = minetest.LIGHT_MAX,
 	selection_box = {
 		type = "wallmounted",
 		wall_top = {-0.1, 0.5-0.6, -0.1, 0.1, 0.5, 0.1},
@@ -274,10 +263,8 @@ minetest.register_node("christmas:orn", {
 	inventory_image = "christmas_orn.png",
 	paramtype = "light",
 	paramtype2 = "wallmounted",
-	light_propagates = true,
 	sunlight_propagates = true,
 	walkable = false,
-	wall_mounted = true,
 	light_source = 0,
 	selection_box = {
 		type = "wallmounted",
@@ -287,8 +274,8 @@ minetest.register_node("christmas:orn", {
 	},
 	legacy_wallmounted = true,
 	on_construct = function(pos)
-		--local n = minetest.env:get_node(pos)
-		local meta = minetest.env:get_meta(pos)
+		--local n = minetest.get_node(pos)
+		local meta = minetest.get_meta(pos)
 	end,
 	groups = {choppy=2,dig_immediate=2},
 	furnace_burntime = 4,
